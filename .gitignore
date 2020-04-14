@@ -48,6 +48,7 @@ Temporary Items
 *.rar
 *.mov
 
+.vs/
 packages/
 KeppyNotesCounter/obj/
 KeppyNotesCounter/bin/x64/
