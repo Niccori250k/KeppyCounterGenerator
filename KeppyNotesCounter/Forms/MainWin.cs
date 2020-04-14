@@ -435,7 +435,7 @@ namespace KeppyCounterGenerator
 
                 // Initialize note count
                 Data.TotalNotes = Convert.ToUInt32(BassMidi.BASS_MIDI_StreamGetEvents(Data.StreamHandle, -1, (BASSMIDIEvent)0x20000, null));
-                Data.HowManyZeroesNotes = String.Concat(Enumerable.Repeat("0", Data.TotalNotes.ToString().Length));
+                Data.HowManyZeroesNotes = "00000";
 
                 // Initialize conversion
                 if (!StartConversion(Data.MIDIToLoad)) return;
@@ -576,7 +576,7 @@ namespace KeppyCounterGenerator
             {
                 Data.Bar = Convert.ToUInt32(((Int64)(Data.Tick / (Data.PPQN / (8 / 4) * 4))).LimitLongToRange(0, 9223372036854775807));
                 Data.TotalBars = Convert.ToUInt32(((Int64)(Data.TotalTicks / (Data.PPQN / (8 / 4) * 4))).LimitLongToRange(0, 9223372036854775807));
-                Data.HowManyZeroesBars = String.Concat(Enumerable.Repeat("0", Data.TotalBars.ToString().Length));
+                Data.HowManyZeroesBars = "000";
             }
             catch
             {
